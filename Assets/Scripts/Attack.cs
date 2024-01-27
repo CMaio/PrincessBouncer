@@ -8,6 +8,7 @@ public class Attack : MonoBehaviour
     public float forceMoveEnemy = 0;
 
     float timeOfAttackRemaining = 0;
+    float forceMovementBase = 0;
     bool attacking;
     InputController controls;
     CharacterRenderer characterRenderer;
@@ -18,6 +19,7 @@ public class Attack : MonoBehaviour
     {
         characterRenderer = GetComponentInChildren<CharacterRenderer>();
         coliderAction = GetComponentInChildren<CircleCollider2D>();
+        forceMovementBase = forceMoveEnemy;
         controls = new InputController();
         controls.Player.Slap.performed += ctx => Slap();
 
@@ -58,6 +60,9 @@ public class Attack : MonoBehaviour
         collisionGm.AddForce(dir * forceMoveEnemy,ForceMode2D.Impulse);
 
     }
+
+    public void increaseAttack(int value) { forceMoveEnemy += value; }
+    public void decreaseAttack() { forceMoveEnemy = forceMovementBase; }
 
     private void OnEnable() { controls.Enable(); }
     private void OnDisable() { controls.Disable(); }
