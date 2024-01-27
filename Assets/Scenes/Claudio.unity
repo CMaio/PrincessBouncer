@@ -341,7 +341,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.3
+  near clip plane: 0
   far clip plane: 1000
   field of view: 60
   orthographic: 1
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 373683964}
-  offset: {x: 0, y: -1, z: 0}
+  offset: {x: 0, y: 1, z: 0}
   smoothSpeed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
