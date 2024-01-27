@@ -13,11 +13,12 @@ public class PlayerMovement : MonoBehaviour
 
 
     InputController controls;
-    float dashing;
+    CharacterRenderer characterRenderer;
+    Rigidbody2D rigidBody;
+
     Vector2 movement;
     Vector2 mvControls;
-    Rigidbody2D rigidBody;
-    CharacterRenderer characterRenderer;
+    float dashing;
     
 
 
@@ -26,9 +27,8 @@ public class PlayerMovement : MonoBehaviour
         rigidBody = GetComponent<Rigidbody2D>();
         characterRenderer = GetComponentInChildren<CharacterRenderer>();
         controls = new InputController();
-        controls.Player.Movement.performed += ctx => mvControls = ctx.ReadValue<Vector2>();
-        controls.Player.Movement.canceled += ctx => mvControls = Vector2.zero;
-        controls.Player.Dash.performed += ctx => dashing = dashForce;
+        SettingControllerOptiions();
+
     }
 
     void FixedUpdate()
@@ -57,4 +57,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnEnable(){controls.Enable();}
     private void OnDisable(){controls.Disable();}
+
+    private void SettingControllerOptiions()
+    {
+        controls.Player.Movement.performed += ctx => mvControls = ctx.ReadValue<Vector2>();
+        controls.Player.Movement.canceled += ctx => mvControls = Vector2.zero;
+        controls.Player.Dash.performed += ctx => dashing = dashForce;
+    }
 }

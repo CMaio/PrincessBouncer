@@ -6,6 +6,8 @@ public class CharacterRenderer : MonoBehaviour
 {
     public static readonly string[] staticDirections = { "Static N", "Static NW", "Static W", "Static SW", "Static S", "Static SE", "Static E", "Static NE" };
     public static readonly string[] runDirections = { "Run N", "Run NW", "Run W", "Run SW", "Run S", "Run SE", "Run E", "Run NE" };
+    public static readonly string attack = "Spining";
+    public bool attacking = false;
 
     Animator animator;
     int lastDirection;
@@ -19,18 +21,25 @@ public class CharacterRenderer : MonoBehaviour
     {
         string[] directionArray = null;
 
-        if (direction.magnitude < .01f)
-        {
-            directionArray = staticDirections;
-
+        if(attacking) {
+            animator.Play(attack);
         }
-        else
-        {
-            directionArray = runDirections;
-            lastDirection = DirectionToIndex(direction,8);
-        }
+        else {
 
-        animator.Play(directionArray[lastDirection]);
+            if (direction.magnitude < .01f)
+            {
+                directionArray = staticDirections;
+
+            }
+            else
+            {
+                directionArray = runDirections;
+                lastDirection = DirectionToIndex(direction, 8);
+            }
+
+            animator.Play(directionArray[lastDirection]);
+        }
+       
     }
 
 
