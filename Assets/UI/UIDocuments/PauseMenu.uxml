@@ -5,9 +5,9 @@
         <ui:VisualElement name="body" style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; min-width: auto; min-height: auto;">
             <ui:VisualElement name="menu" style="flex-grow: 1; align-self: center; align-items: center; justify-content: center; margin-top: 0; margin-right: 33%; margin-bottom: 0; margin-left: 33%; background-color: rgb(153, 187, 255); padding-bottom: 5%; padding-top: 2%; border-top-left-radius: 29px; border-top-right-radius: 29px; border-bottom-right-radius: 29px; border-bottom-left-radius: 29px; min-width: 250px; border-left-color: rgb(54, 52, 161); border-right-color: rgb(54, 52, 161); border-top-color: rgb(54, 52, 161); border-bottom-color: rgb(54, 52, 161); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px;">
                 <ui:Label tabindex="-1" text="Princess Bouncer" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="align-items: stretch; align-self: center; margin-bottom: 20px; -unity-font-style: bold; font-size: 20px;" />
-                <ui:Button text="Continue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Continue" />
-                <ui:Button text="Main Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenu" />
-                <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" />
+                <ui:Button text="(C)ontinue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Continue" />
+                <ui:Button text="(M)ain Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenu" />
+                <ui:Button text="(Q)uit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" />
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:VisualElement name="footer" style="flex-grow: 1; flex-direction: row;" />
