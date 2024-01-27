@@ -11,10 +11,8 @@ public class PlayerMovement : MonoBehaviour
     public float dashForce;
     public float dashSpeed;
 
-    [Header("Special components")]
-    [SerializeField] InputController controls;
 
-    
+    InputController controls;
     float dashing;
     Vector2 movement;
     Vector2 mvControls;
@@ -31,7 +29,6 @@ public class PlayerMovement : MonoBehaviour
         controls.Player.Movement.performed += ctx => mvControls = ctx.ReadValue<Vector2>();
         controls.Player.Movement.canceled += ctx => mvControls = Vector2.zero;
         controls.Player.Dash.performed += ctx => dashing = dashForce;
-
     }
 
     void FixedUpdate()
