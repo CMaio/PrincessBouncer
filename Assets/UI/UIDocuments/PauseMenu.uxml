@@ -1,16 +1,15 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row;" />
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement style="flex-grow: 1;">
-            <ui:VisualElement style="flex-grow: 1;">
-                <ui:Label tabindex="-1" text="Label" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="align-items: stretch; align-self: center;" />
-                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Continue" />
-                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenu" />
-                <ui:Button text="Button" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" />
+    <Style src="project://database/Assets/UI/UIDocuments/UI_pause_menu_styling.uss?fileID=7433441132597879392&amp;guid=714dd6f0526ef48a18ed84e4698914af&amp;type=3#UI_pause_menu_styling" />
+    <ui:VisualElement name="root" style="flex-grow: 1; align-items: center; justify-content: center; align-self: center; min-width: 275px; min-height: 500px;">
+        <ui:VisualElement name="header" style="flex-grow: 1; flex-direction: row;" />
+        <ui:VisualElement name="body" style="flex-grow: 1; flex-direction: row; align-self: center; align-items: center; justify-content: center; margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; min-width: auto; min-height: auto;">
+            <ui:VisualElement name="menu" style="flex-grow: 1; align-self: center; align-items: center; justify-content: center; margin-top: 0; margin-right: 33%; margin-bottom: 0; margin-left: 33%; background-color: rgb(153, 187, 255); padding-bottom: 5%; padding-top: 2%; border-top-left-radius: 29px; border-top-right-radius: 29px; border-bottom-right-radius: 29px; border-bottom-left-radius: 29px; min-width: 250px; border-left-color: rgb(54, 52, 161); border-right-color: rgb(54, 52, 161); border-top-color: rgb(54, 52, 161); border-bottom-color: rgb(54, 52, 161); border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px;">
+                <ui:Label tabindex="-1" text="Princess Bouncer" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Title" style="align-items: stretch; align-self: center; margin-bottom: 20px; -unity-font-style: bold; font-size: 20px;" />
+                <ui:Button text="(C)ontinue" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Continue" />
+                <ui:Button text="(M)ain Menu" parse-escape-sequences="true" display-tooltip-when-elided="true" name="MainMenu" />
+                <ui:Button text="(Q)uit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" />
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement style="flex-grow: 1;" />
+        <ui:VisualElement name="footer" style="flex-grow: 1; flex-direction: row;" />
     </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row;" />
 </ui:UXML>
