@@ -1,0 +1,10 @@
+items.png
+size:494,200
+filter:Linear,Linear
+pma:true
+Feather
+bounds:266,2,226,196
+offsets:0,1,226,197
+Spider
+bounds:2,8,262,190
+offsets:4,4,270,198

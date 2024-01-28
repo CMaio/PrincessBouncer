@@ -13,3 +13,10 @@ MonoBehaviour:
   m_Name: GainingPower
   m_EditorClassIdentifier: 
   ItemName: power
+  timeOfEffect: 10
+  powerIncreasaed: 50
+  powerSizeIncreasaed: 1.5
+  happinesModifier: 0
+  speedModifier: 0
+  secondsOfImmunity: 0
+  slipperyModifier: 0
