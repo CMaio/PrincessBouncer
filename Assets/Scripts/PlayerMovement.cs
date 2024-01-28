@@ -19,6 +19,9 @@ public class PlayerMovement : MonoBehaviour
     Vector2 movement;
     Vector2 mvControls;
     float dashing;
+    float baseSpeed;
+
+    int controlInvert = 1;
     
 
 
@@ -28,6 +31,8 @@ public class PlayerMovement : MonoBehaviour
         characterRenderer = GetComponentInChildren<CharacterRenderer>();
         controls = new InputController();
         SettingControllerOptiions();
+        
+        baseSpeed = movementSpeed;
 
     }
 
@@ -41,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     {
         Vector2 currentPos = rigidBody.position;
         Vector2 inputVector = new Vector2(mvControls.x, mvControls.y).normalized;
-        movement = inputVector * (movementSpeed + dashing);
+        movement = (inputVector * controlInvert)  * (movementSpeed + dashing);
         Vector2 newPos = currentPos + movement * Time.fixedDeltaTime;
         characterRenderer.SetDirection(movement);
         rigidBody.MovePosition(newPos);
@@ -53,6 +58,21 @@ public class PlayerMovement : MonoBehaviour
     {
         if(dashing < 0.001) { dashing = 0; }
         else if(dashing > 0.001) { dashing -= dashing * dashSpeed * Time.fixedDeltaTime; }
+    }
+
+    public void invertControls(bool invert)
+    {
+        controlInvert = invert ? -1 : 1;    
+    }
+
+    public void modifySpeed(float speed)
+    {
+        movementSpeed += speed;
+    }
+
+    public void ResetSpeed()
+    {
+        movementSpeed = baseSpeed;
     }
 
     private void OnEnable(){controls.Enable();}
