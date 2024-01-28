@@ -58,7 +58,6 @@ public class Attack : MonoBehaviour
         Rigidbody2D collisionGm = collision.gameObject.GetComponent<Rigidbody2D>();
 
         collisionGm.AddForce(dir * forceMoveEnemy,ForceMode2D.Impulse);
-
     }
 
     public void increaseAttack(int value) { forceMoveEnemy += value; }
