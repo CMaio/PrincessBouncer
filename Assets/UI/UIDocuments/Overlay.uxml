@@ -1,17 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement style="flex-grow: 0; justify-content: space-around; align-self: stretch; flex-direction: row;">
-        <ui:VisualElement />
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement />
-    </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 1; flex-direction: row;">
-        <ui:VisualElement style="flex-grow: 0;" />
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement style="flex-grow: 0;" />
-    </ui:VisualElement>
-    <ui:VisualElement style="flex-grow: 0; flex-direction: row;">
-        <ui:VisualElement />
-        <ui:VisualElement style="flex-grow: 1;" />
-        <ui:VisualElement />
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: row;">
+        <ui:VisualElement name="princess_happiness" style="flex-grow: 1; justify-content: center; align-self: center; flex-direction: column; align-items: flex-start; min-height: 586px;" />
+        <ui:VisualElement name="placeholder" style="flex-grow: 3; flex-direction: row;" />
+        <ui:VisualElement name="cards" style="flex-grow: 1; flex-direction: column;">
+            <ui:VisualElement />
+            <ui:VisualElement style="flex-grow: 1;" />
+            <ui:VisualElement />
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

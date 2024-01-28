@@ -12,11 +12,11 @@ Button {
     min-height: 70px;
     -unity-text-align: middle-center;
     font-size: 25px;
-    background-color: rgb(204, 226, 253);
-    border-left-color: rgb(54, 52, 161);
-    border-right-color: rgb(54, 52, 161);
-    border-top-color: rgb(54, 52, 161);
-    border-bottom-color: rgb(54, 52, 161);
+    background-color: rgb(183, 185, 213);
+    border-left-color: rgba(38, 47, 114, 0.79);
+    border-right-color: rgba(38, 47, 114, 0.79);
+    border-top-color: rgba(38, 47, 114, 0.79);
+    border-bottom-color: rgba(38, 47, 114, 0.79);
     color: rgb(27, 27, 27);
     border-top-width: 3px;
     border-right-width: 3px;

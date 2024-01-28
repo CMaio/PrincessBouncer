@@ -1,16 +1,20 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/UIDocuments/UI_styling.uss?fileID=7433441132597879392&amp;guid=77c626fc12be84854aaea274aac24384&amp;type=3#UI_styling" />
-    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; align-items: flex-start; justify-content: flex-start; background-color: rgb(153, 187, 255); -unity-background-image-tint-color: rgb(56, 56, 56); min-width: 275px; min-height: 500px;">
+    <ui:VisualElement name="root" style="flex-grow: 1; flex-direction: column; align-items: flex-start; justify-content: flex-start; background-color: rgb(153, 187, 255); -unity-background-image-tint-color: rgb(56, 56, 56); min-width: 335px; min-height: 500px;">
         <ui:VisualElement style="flex-grow: 1;" />
         <ui:VisualElement style="flex-grow: 2; flex-direction: row; justify-content: center;">
             <ui:VisualElement name="Menu" style="flex-grow: 1;">
                 <ui:VisualElement name="Header" style="flex-grow: 0; flex-shrink: 1; justify-content: center; align-items: center; align-self: auto; flex-direction: column; flex-wrap: nowrap;">
-                    <ui:Label tabindex="-1" text="Princess &#10;Bouncer" parse-escape-sequences="false" display-tooltip-when-elided="true" name="Title" style="flex-shrink: 0; font-size: 50px; -unity-font-style: bold; flex-direction: column; margin-left: 25px;" />
+                    <ui:VisualElement name="Title" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/UIDocuments/Images/twxt_logo.gif?fileID=21300000&amp;guid=bbc444cd0646945a1aee47b5db5268fa&amp;type=3#twxt_logo&apos;); min-width: 334px; min-height: 150px; margin-left: 15px;" />
                 </ui:VisualElement>
                 <ui:VisualElement name="Body" style="flex-grow: 1; flex-direction: row; align-self: center; justify-content: center; align-items: center;">
                     <ui:VisualElement name="Menu-Buttons" style="flex-grow: 1; justify-content: center; align-items: center; align-self: center;">
-                        <ui:Button text="Start" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" />
-                        <ui:Button text="Settings" parse-escape-sequences="false" display-tooltip-when-elided="true" name="Settings" />
+                        <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Start" style="background-image: none;">
+                            <ui:VisualElement name="start-txt" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/UIDocuments/Images/start%201.png?fileID=21300000&amp;guid=0338c387d58554984aef3948fcfffce7&amp;type=3#start 1&apos;); margin-top: -14px; margin-right: -14px; margin-bottom: -14px; margin-left: -14px;" />
+                        </ui:Button>
+                        <ui:Button parse-escape-sequences="false" display-tooltip-when-elided="true" name="Settings">
+                            <ui:VisualElement name="settings-txt" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/UIDocuments/Images/settings%201.png?fileID=21300000&amp;guid=dca90bd18b5a84a708b16f725db4f485&amp;type=3#settings 1&apos;); margin-top: -15px; margin-right: -15px; margin-bottom: -15px; margin-left: -15px;" />
+                        </ui:Button>
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
@@ -18,10 +22,14 @@
         </ui:VisualElement>
         <ui:VisualElement name="Footer" style="flex-grow: 0; flex-direction: row; justify-content: center; align-self: stretch; align-items: center;">
             <ui:VisualElement name="Left-Box" style="flex-grow: 1; align-items: flex-start;">
-                <ui:Button text="Quit" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" style="justify-content: flex-start; align-items: stretch; flex-direction: column;" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Quit" style="justify-content: flex-start; align-items: stretch; flex-direction: column;">
+                    <ui:VisualElement name="quit_txt" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/UIDocuments/Images/quit.png?fileID=2800000&amp;guid=1b8d4bd652ae241bc974f034a7322af0&amp;type=3#quit&apos;); margin-top: 4px;" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:VisualElement name="Right-Box" style="flex-grow: 1; align-items: flex-end;">
-                <ui:Button text="Credits" parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" enable-rich-text="false" />
+                <ui:Button parse-escape-sequences="true" display-tooltip-when-elided="true" name="Credits" enable-rich-text="false">
+                    <ui:VisualElement name="credits-txt" style="flex-grow: 1; background-image: url(&apos;project://database/Assets/UI/UIDocuments/Images/credits.png?fileID=2800000&amp;guid=3c64a3e547aed4a80b19e657a3b70eb1&amp;type=3#credits&apos;); margin-top: 0; min-height: auto; min-width: auto;" />
+                </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
