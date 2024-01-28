@@ -20,6 +20,7 @@ public class pickupscript : MonoBehaviour
     {
         if (collission.gameObject.tag == "Player")
         {
+
             Destroy (gameObject);
         }
     }

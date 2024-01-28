@@ -18,11 +18,4 @@ public class ItemsManager : ScriptableObject
     public float secondsOfImmunity;
     public float slipperyModifier;
 
-    private void OnTriggerEnter2D(Collider2D collission)
-    {
-        if (collission.CompareTag("Collectable"))
-        {
-            collission.gameObject.SetActive(false);
-        }
-    }
 }
