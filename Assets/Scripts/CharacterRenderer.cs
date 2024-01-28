@@ -64,4 +64,6 @@ public class CharacterRenderer : MonoBehaviour
 
         return Mathf.FloorToInt(stepCount);
     }
+
+    
 }
