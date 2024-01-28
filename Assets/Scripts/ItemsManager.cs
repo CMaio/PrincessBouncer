@@ -12,6 +12,7 @@ public class ItemsManager : ScriptableObject
     [Space]
     [Header("Specific parameters")]
     public int powerIncreasaed;
+    public float powerSizeIncreasaed;
     public int happinesModifier;
     public float speedModifier;
     public float secondsOfImmunity;
