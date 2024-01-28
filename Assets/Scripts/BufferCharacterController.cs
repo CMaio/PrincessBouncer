@@ -8,15 +8,10 @@ public class BufferCharacterController : MonoBehaviour
     PlayerMovement pm;
     Attack attack;
 
-    float timeRemainingEffect = 0;
-    string actualEffect = "";
-
     bool power = false;
     bool immunity = false;
-    bool slipery = false;
     bool speed = false;
     bool invert = false;
-    bool slow = false;
 
     private void Awake()
     {
@@ -30,18 +25,11 @@ public class BufferCharacterController : MonoBehaviour
     public void itemManager(ItemsManager item)
     {
         switch (item.ItemName) {
-            case "slipery":
-                //You become slipery and keep moving even if you stop
-                if (!slipery)
-                {
-
-                }
-                break;
             case "power":
                 //Makes you powerful in general
                 if (!power)
                 {
-                    StartCoroutine(createPower(item.powerIncreasaed,item.timeOfEffect));
+                    StartCoroutine(createPower(item.powerIncreasaed,item.powerSizeIncreasaed,item.timeOfEffect));
                 }
                 break;
             case "immunity":
@@ -78,15 +66,14 @@ public class BufferCharacterController : MonoBehaviour
                 if (!speed)
                 {
                     StartCoroutine(modifySpeed(-item.speedModifier,item.timeOfEffect));
-
                 }
                 break;
         }
     }
 
-    IEnumerator createPower(int value,float duration)
+    IEnumerator createPower(int value,float valueSize,float duration)
     {
-        transform.localScale += new Vector3(value, value, 0);
+        transform.localScale += new Vector3(valueSize, valueSize, 0);
         attack.increaseAttack(value);
         power = true;
 
@@ -94,6 +81,8 @@ public class BufferCharacterController : MonoBehaviour
 
         power = false;
         attack.decreaseAttack();
+        transform.localScale -= new Vector3(valueSize, valueSize, 0);
+
 
     }
 
