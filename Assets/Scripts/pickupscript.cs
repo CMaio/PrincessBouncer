@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class pickupscript : MonoBehaviour
 {
+
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,9 @@ public class pickupscript : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collission)
     {
-        if (collission.gameObject.tag == "Player")
+        if (collission.tag == "Player")
         {
-
-            Destroy (gameObject);
+            Destroy(gameObject);
         }
     }
 }

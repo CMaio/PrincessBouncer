@@ -13,6 +13,8 @@ public class Attack : MonoBehaviour
     InputController controls;
     CharacterRenderer characterRenderer;
     CircleCollider2D coliderAction;
+    
+    [SerializeField] ParticleSystem effect;
 
 
     void Awake()
@@ -58,6 +60,14 @@ public class Attack : MonoBehaviour
         Rigidbody2D collisionGm = collision.gameObject.GetComponent<Rigidbody2D>();
 
         collisionGm.AddForce(dir * forceMoveEnemy,ForceMode2D.Impulse);
+    }
+
+    private void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "Collectable")
+        {
+            effect.Play();
+        }
     }
 
     public void increaseAttack(int value) { forceMoveEnemy += value; }
